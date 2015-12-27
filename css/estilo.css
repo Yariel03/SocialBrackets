@@ -1,0 +1,164 @@
+
+body
+{
+    background-color: #f0f0f0;
+    padding-top: 70px;
+}
+
+
+h1
+{
+    font-weight: bolder;
+}
+.derecha
+{
+    padding-top: 90px;
+    float: right;
+    padding-left:  50px;
+    width: 50%;
+
+
+
+}
+
+
+label
+{
+    width: 100%;
+}
+
+
+.izquierda{
+    padding-top: 50px;
+    width: 50%;
+    float: left;
+    padding-left: 20px;
+}
+
+img
+{
+    width: 60%;
+    margin-left: 30px;
+
+}
+
+
+@media screen and (min-width: 1200px)
+{
+.registro
+{
+    margin-top: 300px;
+    width: 90%;
+    height: 100px;
+    margin-left: 20px;
+}
+    .derecha
+    {
+        width: 50%;
+        padding-top: 20px;
+
+    }
+
+    input,label
+    {
+        font-size: 25px;
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+@media screen and (max-width: 800px)
+{
+    .container
+    {
+        width: 90%;
+
+    }
+
+    img
+    {
+       margin: 0px auto;
+        width: 40%;
+       display: block;
+        text-align: center;
+    }
+    .izquierda
+    {
+        padding-top: 10px;
+        width: 100%;
+    }
+
+    h1
+    {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .derecha
+    {
+        padding-top: 0px;
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    label
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+    input
+    {
+        width: 100%;
+        align-content: center;
+
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    img, .izquierda
+    {
+        display: none;
+    }
+
+    .derecha
+    {
+        padding-top: 10px;
+        float: none;
+        width: 100%;
+        padding-left: 0px;
+        margin-left: 0px
+    }
+
+    input,button,label,button
+    {
+        width: 100%;
+        font-size: 24px;
+
+
+    }
+
+    label
+    {
+        text-align: center;
+
+    }
+
+}
+
+
+
+
+
+
+
