@@ -23,34 +23,40 @@ class Clconsulta
         $buscar="SELECT * FROM Tuser
 		where email='$email'";
 
-		$decript="SELECT CAST(AES_DECRYPT(contrasenia,'alalsdk')as char(50)) from tuser";
+		$decript="SELECT
+		contrasenia as encriptado,
+		CAST( AES_DECRYPT(contrasenia,'alalsdk') as char(50)) as decry
+		FROM tuser";
 
         $result=mysql_query($buscar,$conexion);
         $result2=mysql_query($decript,$conexion);
 
 
-        $row2=mysql_fetch_array($result2);
 
 
         if($row=mysql_fetch_array($result))
 		{
 			echo $contrasenia." este en la variable<br>";
-			echo $row2['(AES_DECRYPT(contrasenia,"alalsdk")'];
-			if($contrasenia==$row2['CAST(AES_DECRYPT(contrasenia,"alalsdk")as char(50)'])
+			while($row2=mysql_fetch_array($result2))
 			{
-				echo "Esta aqui";
-			}
-			else
-			{
-				echo "Contraseña incorrecta";
 
+				if($contrasenia==$row2['decry'])
+				{
+					echo "Esta aqui";
+				}
+				else
+				{
+					echo "Contraseña incorrecta";
+				}
 			}
 		}
 		else
 		{
 			echo"No existe";
 		}
+
 	}
 }
-
 ?>
+
+

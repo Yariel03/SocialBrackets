@@ -76,7 +76,7 @@ require "config.php";
 
                     <!--formulario para login-->
 
-                    <form action="php/login.php" id="formlogin"  method="post">
+                    <form action="Core/Controller/login.php" id="formlogin"  method="post">
                         <!--grupos de input y label para validar y funcione el bootstrapValidator-->
 
                        <div class="form-group">
@@ -122,7 +122,7 @@ require "config.php";
                        <div class="registro">
                             <h6>No esta registrado?</h6>
                             <?php
-                      echo '<a href="'.C.'registro.html">Registrate</a>';
+                      echo '<a href="'.V.'registroView.html">Registrate</a>';
 						   ?>
                        </div>
         </div>
