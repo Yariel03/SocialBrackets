@@ -1,3 +1,8 @@
+<?php
+error_reporting(E_ALL ^ E_NOTICE);
+require "config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <!--cabezera-->
@@ -71,7 +76,7 @@
 
                     <!--formulario para login-->
 
-                    <form action="#" id="formlogin"  method="post">
+                    <form action="php/login.php" id="formlogin"  method="post">
                         <!--grupos de input y label para validar y funcione el bootstrapValidator-->
 
                        <div class="form-group">
@@ -111,11 +116,14 @@
                         </div>
 
                     </form>
+
                      <!-- registrarse -->
 
                        <div class="registro">
                             <h6>No esta registrado?</h6>
-                            <a href="php/registro.html">Registrate</a>
+                            <?php
+                      echo '<a href="'.C.'registro.html">Registrate</a>';
+						   ?>
                        </div>
         </div>
 
@@ -129,4 +137,5 @@
 
 </body>
 </html>
+
 

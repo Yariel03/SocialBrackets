@@ -26,7 +26,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            txtcontraseña:
+            txtcontrasenia:
             {
                 message: 'Contraseña no valida',
                 validators:
